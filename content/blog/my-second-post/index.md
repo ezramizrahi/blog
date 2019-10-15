@@ -1,13 +1,26 @@
 ---
-title: My Second Post!
-date: "2015-05-06T23:46:37.121Z"
+title: Cypress - E2E Testing and Race Conditions
+date: "2015-10-16"
 ---
 
-Wow! I love blogging so much already.
+For the past 7 months I've been using Cypress as my E2E testing tool. While
+there are some things I'd like to see implemented (e.g. support for native browser events, support for Firefox), I have few complaints. Cypress is really enjoyable to use.
 
-Did you know that "despite its name, salted duck eggs can also be made from
-chicken eggs, though the taste and texture will be somewhat different, and the
-egg yolk will be less rich."?
-([Wikipedia Link](http://en.wikipedia.org/wiki/Salted_duck_egg))
+In the early stages of writing tests using Cypress, I found many of my tests failing - even though
+during manual testing nothing was wrong. In a lot of these cases, race conditions (i.e. the application acting too slow, and Cypress acting too fast) was the cause for the failures. Here are some useful methods I've learned to guard against failures due to race conditions in Cypress.
 
-Yeah, I didn't either.
+### cy.wait(...)
+Let's say you're using `cy.get()` to check if a list of articles has appeared on your page. But for whatever reason, the data didn't load so quickly this time, and your `cy.get()` yields nothing, and the test fails. Using `cy.wait(@someApi)` (which automatically tests for a 200 server response) will help guard against checking for data that may not exist yet.
+
+### Set up guards
+Again, let's say you're using `.click()` on a button on the page. Again, for whatever reason, maybe the button has not yet been rendered and Cypress is already trying to `cy.get()` it and `.click()` it. If the button isn't there and the command timeout has been reached, the test will fail. Before you try to `.click()` on a button for example, test that it exists in the DOM with something like
+
+```
+cy.get('button').should('exist');
+```
+or
+```
+cy.get('button').should('be.visible');
+```
+
+There's lots of ways you can go about setting up guards, those are just two simple ideas.

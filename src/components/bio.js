@@ -54,10 +54,16 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong> who lives and works in Singapore.
+        Written by <strong>{author}</strong>, a software engineer passionate about Test Driven Development. This blog is a collection of useful things I've learned.
         {` `}
         <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
+          Follow me on Twitter
+        </a>
+        {` `}
+        and
+        {` `}
+        <a href={`https://github.com/${social.github}`}>
+          check out my GitHub
         </a>
       </p>
     </div>
