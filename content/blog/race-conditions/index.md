@@ -12,6 +12,14 @@ during manual testing nothing was wrong. In a lot of these cases, race condition
 ### cy.wait(...)
 Let's say you're using `cy.get()` to check if a list of articles has appeared on your page. But for whatever reason, the data didn't load so quickly this time, and your `cy.get()` yields nothing, and the test fails. Using `cy.wait(@someApi)` (which automatically tests for a 200 server response) will help guard against checking for data that may not exist yet.
 
+If you want to be more certain that data you're checking for is actually available, you can use a test like
+
+```
+cy.wait('@someApi').then((xhr) => {
+  expect(xhr.response.body.data).to.not.be.empty;
+});
+```
+
 ### Set up guards
 Again, let's say you're using `.click()` on a button on the page. Again, for whatever reason, maybe the button has not yet been rendered and Cypress is already trying to `cy.get()` it and `.click()` it. If the button isn't there and the command timeout has been reached, the test will fail. Before you try to `.click()` on a button for example, test that it exists in the DOM with something like
 
