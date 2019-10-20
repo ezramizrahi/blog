@@ -18,3 +18,5 @@ git cherry-pick commitreference
 
 where `commitreference` is a `SHA` that will look
 something like `a6f163d340eac0d2c65e362ea18b15e91485a8b2`.
+
+The commit should now be on the correct branch!

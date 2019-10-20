@@ -10,7 +10,7 @@ In the early stages of writing tests using Cypress, I found many of my tests fai
 during manual testing nothing was wrong. In a lot of these cases, race conditions (i.e. the application acting too slow, and Cypress acting too fast) was the cause for the failures. Here are some useful methods I've learned to guard against failures due to race conditions in Cypress.
 
 ### cy.wait(...)
-Let's say you're using `cy.get()` to check if a list of articles has appeared on your page. But for whatever reason, the data didn't load so quickly this time, and your `cy.get()` yields nothing, and the test fails. Using `cy.wait(@someApi)` (which automatically tests for a 200 server response) will help guard against checking for data that may not exist yet.
+Let's say you're using `cy.get()` to check if a list of articles has appeared on your page. But for whatever reason, the data didn't load so quickly this time, and your `cy.get()` yields nothing, and the test fails. Using `cy.wait('@someApi')` (which automatically tests for a 200 server response) will help guard against checking for data that may not exist yet.
 
 If you want to be more certain that data you're checking for is actually available, you can use a test like
 
