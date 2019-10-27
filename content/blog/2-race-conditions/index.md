@@ -1,6 +1,6 @@
 ---
 title: "Cypress - E2E Testing and Race Conditions"
-date: "2015-10-16"
+date: "2019-10-16"
 ---
 
 For the past 7 months I've been using Cypress as my E2E testing tool. While

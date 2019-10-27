@@ -1,6 +1,6 @@
 ---
 title: "Adding a key:value pair"
-date: "2015-10-22"
+date: "2019-10-22"
 ---
 
 Let's say you have the following array of objects:
