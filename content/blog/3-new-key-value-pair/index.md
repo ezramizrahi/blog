@@ -1,5 +1,5 @@
 ---
-title: Adding a key:value pair
+title: "Adding a key:value pair"
 date: "2015-10-22"
 ---
 
