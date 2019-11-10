@@ -65,7 +65,7 @@ const arrayOfFilms = [
 ];
 ```
 
-And we use the same sort and splice methods:
+We can use the same sort and splice methods:
 
 ```
 const topFiveFilms = arrayOfFilms.sort((a, b) => b.rating - a.rating).splice(0,5);
