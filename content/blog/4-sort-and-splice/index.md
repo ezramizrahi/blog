@@ -36,7 +36,7 @@ The `sortedArrayOfFilms` should look like:
  ];
 ```
 
-But I also needed to only grab the top five! To do this we can use `Array.prototype.splice()`:
+But I only needed to grab the top five! To do this we can use `Array.prototype.splice()`:
 
 ```
 const topFiveFilms = arrayOfFilms.sort((a, b) => b.rating - a.rating).splice(0,5);
@@ -65,7 +65,7 @@ const arrayOfFilms = [
 ];
 ```
 
-And after we again use the following sort and splice methods:
+And we use the same sort and splice methods:
 
 ```
 const topFiveFilms = arrayOfFilms.sort((a, b) => b.rating - a.rating).splice(0,5);
