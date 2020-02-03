@@ -1,1 +1,2 @@
-## My blog using a Gatsby template.
+# Git Commit
+Ezra Mizrahi's blog using a Gatsby template.
