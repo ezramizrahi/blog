@@ -10,7 +10,7 @@ The other day I needed to sort through an array of objects and grab five of the 
   { film_title: 'The Mummy', rating: 8 },
   { film_title: 'Anchorman', rating: 7.5 },
   { film_title: 'Miss Congeniality', rating: 1 },
-  { film_title: 'Boiling Point', rating: 9 },
+  { film_title: '３－４Ｘ１０月', rating: 9 },
   { film_title: 'The Lobster', rating: 8 },
   { film_title: 'Avengers: Endgame', rating: 3 }
  ];
@@ -26,7 +26,7 @@ The `sortedArrayOfFilms` should look like:
 
 ```
  const sortedArrayOfFilms = [
-  { film_title: 'Boiling Point', rating: 9 },
+  { film_title: '３－４Ｘ１０月', rating: 9 },
   { film_title: 'The Mummy', rating: 8 },
   { film_title: 'The Lobster', rating: 8 },
   { film_title: 'Anchorman', rating: 7.5 },
@@ -46,7 +46,7 @@ This should give us:
 
 ```
  const topFiveFilms = [
-  { film_title: 'Boiling Point', rating: 9 },
+  { film_title: '３－４Ｘ１０月', rating: 9 },
   { film_title: 'The Mummy', rating: 8 },
   { film_title: 'The Lobster', rating: 8 },
   { film_title: 'Anchorman', rating: 7.5 },
@@ -60,22 +60,22 @@ Not a problem - let's say we have the following array of objects:
 ```
 const arrayOfFilms = [
   { film_title: 'The Rocky Horror Picture Show', rating: 7 },
-  { film_title: 'The Mummy', rating: 8 },
+  { film_title: '３－４Ｘ１０月', rating: 9 },
   { film_title: 'Anchorman', rating: 7.5 }
 ];
 ```
 
-We can use the same sort and splice methods:
+We can use the same sort and splice methods, and using `.splice(0,5)` shouldn't throw an error:
 
 ```
-const topFiveFilms = arrayOfFilms.sort((a, b) => b.rating - a.rating).splice(0,5);
+const topFilms = arrayOfFilms.sort((a, b) => b.rating - a.rating).splice(0,5);
 ```
 
 We should end up with:
 
 ```
-const topFiveFilms = [
-  { film_title: 'The Mummy', rating: 8 },
+const topFilms = [
+  { film_title: '３－４Ｘ１０月', rating: 9 },
   { film_title: 'Anchorman', rating: 7.5 },
   { film_title: 'The Rocky Horror Picture Show', rating: 7 }
 ];
