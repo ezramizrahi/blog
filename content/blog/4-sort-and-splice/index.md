@@ -1,18 +1,18 @@
 ---
-title: "Sort and Splice"
+title: "Sort And Splice"
 date: "2019-11-10"
 ---
 The other day I needed to sort through an array of objects and grab five of the objects with the highest ratings. The array looked something roughly like this (although with a lot more key value pairs):
 
 ```
  const arrayOfFilms = [
-  { film_title: 'The Rocky Horror Picture Show', rating: 7 },
-  { film_title: 'The Mummy', rating: 8 },
-  { film_title: 'Anchorman', rating: 7.5 },
-  { film_title: 'Miss Congeniality', rating: 1 },
-  { film_title: '３－４Ｘ１０月', rating: 9 },
-  { film_title: 'The Lobster', rating: 8 },
-  { film_title: 'Avengers: Endgame', rating: 3 }
+  { film_title: 'The Rocky Horror Picture Show', director: 'Jim Sharman', rating: 7 },
+  { film_title: 'The Mummy', director: 'Stephen Sommers', rating: 8 },
+  { film_title: 'Anchorman', director: 'Adam McKay', rating: 7.5 },
+  { film_title: 'Miss Congeniality', director: 'Donald Petrie', rating: 1 },
+  { film_title: 'Boiling Point', director: 'Takeshi Kitano', rating: 9 },
+  { film_title: 'The Lobster', director: 'Yorgos Lanthimos', rating: 8 },
+  { film_title: 'Avengers: Endgame', director: 'Joe Russo', rating: 3 }
  ];
 ```
 
@@ -26,13 +26,13 @@ The `sortedArrayOfFilms` should look like:
 
 ```
  const sortedArrayOfFilms = [
-  { film_title: '３－４Ｘ１０月', rating: 9 },
-  { film_title: 'The Mummy', rating: 8 },
-  { film_title: 'The Lobster', rating: 8 },
-  { film_title: 'Anchorman', rating: 7.5 },
-  { film_title: 'The Rocky Horror Picture Show', rating: 7 },
-  { film_title: 'Avengers: Endgame', rating: 3 },
-  { film_title: 'Miss Congeniality', rating: 1 }
+  { film_title: 'Boiling Point', director: 'Takeshi Kitano', rating: 9 },
+  { film_title: 'The Mummy', director: 'Stephen Sommers', rating: 8 },
+  { film_title: 'The Lobster', director: 'Yorgos Lanthimos', rating: 8 },
+  { film_title: 'Anchorman', director: 'Adam McKay', rating: 7.5 },
+  { film_title: 'The Rocky Horror Picture Show', director: 'Jim Sharman', rating: 7 },
+  { film_title: 'Avengers: Endgame', director: 'Joe Russo', rating: 3 },
+  { film_title: 'Miss Congeniality', director: 'Donald Petrie', rating: 1 }
  ];
 ```
 
@@ -46,11 +46,11 @@ This should give us:
 
 ```
  const topFiveFilms = [
-  { film_title: '３－４Ｘ１０月', rating: 9 },
-  { film_title: 'The Mummy', rating: 8 },
-  { film_title: 'The Lobster', rating: 8 },
-  { film_title: 'Anchorman', rating: 7.5 },
-  { film_title: 'The Rocky Horror Picture Show', rating: 7 }
+  { film_title: 'Boiling Point', director: 'Takeshi Kitano', rating: 9 },
+  { film_title: 'The Mummy', director: 'Stephen Sommers', rating: 8 },
+  { film_title: 'The Lobster', director: 'Yorgos Lanthimos', rating: 8 },
+  { film_title: 'Anchorman', director: 'Adam McKay', rating: 7.5 },
+  { film_title: 'The Rocky Horror Picture Show', director: 'Jim Sharman', rating: 7 }
  ];
 ```
 
@@ -59,9 +59,9 @@ Not a problem - let's say we have the following array of objects:
 
 ```
 const arrayOfFilms = [
-  { film_title: 'The Rocky Horror Picture Show', rating: 7 },
-  { film_title: '３－４Ｘ１０月', rating: 9 },
-  { film_title: 'Anchorman', rating: 7.5 }
+  { film_title: 'The Rocky Horror Picture Show', director: 'Jim Sharman', rating: 7 },
+  { film_title: 'Boiling Point', director: 'Takeshi Kitano', rating: 9 },
+  { film_title: 'Anchorman', director: 'Adam McKay', rating: 7.5 }
 ];
 ```
 
@@ -75,8 +75,8 @@ We should end up with:
 
 ```
 const topFilms = [
-  { film_title: '３－４Ｘ１０月', rating: 9 },
-  { film_title: 'Anchorman', rating: 7.5 },
-  { film_title: 'The Rocky Horror Picture Show', rating: 7 }
+  { film_title: 'Boiling Point', director: 'Takeshi Kitano', rating: 9 },
+  { film_title: 'Anchorman', director: 'Adam McKay', rating: 7.5 },
+  { film_title: 'The Rocky Horror Picture Show', director: 'Jim Sharman', rating: 7 }
 ];
 ```

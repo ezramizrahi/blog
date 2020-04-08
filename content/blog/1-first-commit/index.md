@@ -1,5 +1,5 @@
 ---
-title: "First commit"
+title: "First Commit"
 date: "2019-10-15"
 description: "How to use git cherry-pick"
 ---

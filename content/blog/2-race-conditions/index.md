@@ -1,5 +1,5 @@
 ---
-title: "Cypress - E2E Testing and Race Conditions"
+title: "Cypress - E2E Testing And Race Conditions"
 date: "2019-10-16"
 ---
 

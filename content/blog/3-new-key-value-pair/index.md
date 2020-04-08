@@ -1,5 +1,5 @@
 ---
-title: "Adding a key:value pair"
+title: "Adding A Key:Value Pair With Array.prototype.map()"
 date: "2019-10-22"
 ---
 
