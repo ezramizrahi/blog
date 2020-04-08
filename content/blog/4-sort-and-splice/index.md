@@ -65,13 +65,13 @@ const arrayOfFilms = [
 ];
 ```
 
-We can use the same sort and splice methods, and using `.splice(0,5)` shouldn't throw an error:
+We can use the same sort and splice methods, and using `.splice(0,5)` shouldn't throw an error even if we only have two or three objects in the array:
 
 ```
 const topFilms = arrayOfFilms.sort((a, b) => b.rating - a.rating).splice(0,5);
 ```
 
-We should end up with:
+Using the above, we should end up with:
 
 ```
 const topFilms = [
