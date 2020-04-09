@@ -1,9 +1,10 @@
 ---
 title: "Cypress - E2E Testing And Race Conditions"
 date: "2019-10-16"
+description: "How to achieve less flaky test results in Cypress"
 ---
 
-For the past 7 months I've been using Cypress as my E2E testing tool. While
+For the past 7 months I've been using [Cypress](https://www.cypress.io/) as my E2E testing tool. While
 there are some things I'd like to see implemented (e.g. support for native browser events, support for Firefox), I have few complaints. Cypress is really enjoyable to use.
 
 In the early stages of writing tests using Cypress, I found many of my tests failing - even though

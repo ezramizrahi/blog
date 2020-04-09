@@ -1,6 +1,7 @@
 ---
 title: "Sort And Splice"
 date: "2019-11-10"
+description: "How to easily sort through an array of objects"
 ---
 The other day I needed to sort through an array of objects and grab five of the objects with the highest ratings. The array looked something roughly like this (although with a lot more key value pairs):
 
