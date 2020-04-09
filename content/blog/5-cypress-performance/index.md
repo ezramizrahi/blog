@@ -23,11 +23,11 @@ cy.window().then((win) => {
 The above should return an array of objects that looks something like:
 
 ```javascript
-  [
-    { initiatorType: 'xmlhttprequest', ... },
-    { initiatorType: 'xmlhttprequest', ... },
-    ...
-  ]
+[
+  { initiatorType: 'xmlhttprequest', ... },
+  { initiatorType: 'xmlhttprequest', ... },
+  ...
+]
 ```
 
 Let's filter even more - we only want performance metrics for `/api/1.0/films`:
@@ -46,15 +46,15 @@ cy.window().then((win) => {
 After filtering, the above should leave us with the resource we're after:
 
 ```javascript
-  [
-    {
-      initiatorType: 'xmlhttprequest',
-      ...
-      name: '.../api/1.0/films',
-      ...
-      duration: 1391.7400000500493
-    }
-  ]
+[
+  {
+    initiatorType: 'xmlhttprequest',
+    ...
+    name: '.../api/1.0/films',
+    ...
+    duration: 1391.7400000500493
+  }
+]
 ```
 
 This should return an object of performance metrics for our API. The metric we're interested in is **duration** - how long this resource took to load in milliseconds. Let's grab that, and push it into an array to use later.
