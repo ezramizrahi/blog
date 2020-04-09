@@ -3,7 +3,7 @@ title: "Site Performance With Cypress, Plotly, And The Performance Interface - P
 date: "2020-04-09"
 description: "Use Cypress, Plotly, and the Performance Interface to measure and visualize site performance"
 ---
-If you haven't heard of it, [Cypress](https://www.cypress.io/) is a fantastic E2E JavaScript testing framework. It's straightforward to both set up and use. An interesting feature of Cypress that I've been exploring recently, is that Cypress can also be used to grab site/app performance metrics.
+If you haven't heard of it, [Cypress](https://www.cypress.io/) is a fantastic E2E JavaScript testing framework. It's straightforward to both set up and use. An interesting feature of Cypress that I've been exploring recently, is that it can also be used to grab site/app performance metrics.
 
 This post will take a quick look at one way you could go about grabbing performance data during a test using Cypress and the [Performance Interface](https://developer.mozilla.org/en-US/docs/Web/API/Performance). Then, I'll quickly go over one way that you could visualize that data using [Plotly](https://plotly.com/python/). This post also assumes a bit of familiarity with Cypress, Plotly, and the Performance Interface.
 
