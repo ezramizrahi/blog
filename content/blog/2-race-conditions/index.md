@@ -1,9 +1,10 @@
 ---
 title: "Cypress - E2E Testing And Race Conditions"
 date: "2019-10-16"
+description: "How to achieve less flaky test results in Cypress"
 ---
 
-For the past 7 months I've been using Cypress as my E2E testing tool. While
+For the past 7 months I've been using [Cypress](https://www.cypress.io/) as my E2E testing tool. While
 there are some things I'd like to see implemented (e.g. support for native browser events, support for Firefox), I have few complaints. Cypress is really enjoyable to use.
 
 In the early stages of writing tests using Cypress, I found many of my tests failing - even though
@@ -14,7 +15,7 @@ Let's say you're using `cy.get()` to check if a list of articles has appeared on
 
 If you want to be more certain that data you're checking for is actually available, you can use a test like
 
-```
+```javascript
 cy.wait('@someApi').then((xhr) => {
   expect(xhr.response.body.data).to.not.be.empty;
 });
@@ -23,11 +24,11 @@ cy.wait('@someApi').then((xhr) => {
 ### Set up guards
 Again, let's say you're using `.click()` on a button on the page. Again, for whatever reason, maybe the button has not yet been rendered and Cypress is already trying to `cy.get()` it and `.click()` it. If the button isn't there and the command timeout has been reached, the test will fail. Before you try to `.click()` on a button for example, test that it exists in the DOM with something like
 
-```
+```javascript
 cy.get('button').should('exist');
 ```
 or
-```
+```javascript
 cy.get('button').should('be.visible');
 ```
 

@@ -54,7 +54,7 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong>, a software engineer passionate about Test Driven Development. This blog is a collection of useful things I've learned.
+        Written by <strong>{author}</strong>, a software engineer. This blog is a collection of useful things I've learned.
         {` `}
         <a href={`https://twitter.com/${social.twitter}`}>
           Follow me on Twitter
