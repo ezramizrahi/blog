@@ -12,8 +12,13 @@ This post will take a quick look at one way you could go about grabbing performa
 describe('API Duration', () => {
 
   after(() => {
+    // convert the array into JSON
     const durationJSON = JSON.stringify(durationArray);
+
+    // declare the file path
     const path = './cypress/performance/results.json';
+
+    // write the file
     cy.writeFile(path, durationJSON);
   })
 
