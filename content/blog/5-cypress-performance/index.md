@@ -3,11 +3,11 @@ title: "Site Performance With Cypress, Plotly, And The Performance Interface - P
 date: "2020-04-09"
 description: "Use Cypress, Plotly, and the Performance Interface to measure and visualize site performance"
 ---
-If you haven't heard of it, [Cypress](https://www.cypress.io/) is a fantastic E2E JavaScript testing framework. It's both straightforward to set up and use. An interesting feature of Cypress that I've been exploring recently, is that Cypress can also be used to grab site/app performance metrics.
+If you haven't heard of it, [Cypress](https://www.cypress.io/) is a fantastic E2E JavaScript testing framework. It's straightforward to both set up and use. An interesting feature of Cypress that I've been exploring recently, is that Cypress can also be used to grab site/app performance metrics.
 
 This post will take a quick look at one way you could go about grabbing performance data during a test using Cypress and the [Performance Interface](https://developer.mozilla.org/en-US/docs/Web/API/Performance). Then, I'll quickly go over one way that you could visualize that data using [Plotly](https://plotly.com/python/). This post also assumes a bit of familiarity with Cypress, Plotly, and the Performance Interface.
 
-For this example, let's say you have an app that calls the API `/api/1.0/films` when you visit the route `/films`. The data returned from this call could be a list of a user's favourite films, a total list of films in the database, or whatever. The data from this call is used to populate a table on the page with film title, image, and so on. We want to know how long it takes for this specific resource to load so we can assess its performance and maybe improve it for a better end-user experience.
+For this example, let's say you have an app that calls the API `/api/1.0/films` when you visit the route `/films`. The data returned from this call could be a list of a user's favourite films, a total list of films in the database, whatever really. The data from this call could be used to populate a table on the page with film title, image, and so on. We want to know how long it takes for this specific resource to load so we can assess its performance, and maybe improve it for a better end-user experience.
 
 To get this data, we just need to access the [window.performance](https://developer.mozilla.org/en-US/docs/Web/API/Window/performance) object after we've confirmed our call to `/api/1.0/films` has been successful.
 
@@ -57,7 +57,7 @@ After filtering, the above should leave us with the resource we're after:
   ]
 ```
 
-This should return an object of performance metrics for our API. The one we're interested in is **duration** - how long this resource took to load in milliseconds. Let's grab that, and push it into an array to use later.
+This should return an object of performance metrics for our API. The metric we're interested in is **duration** - how long this resource took to load in milliseconds. Let's grab that, and push it into an array to use later.
 
 ```javascript
 cy.window().then((win) => {
