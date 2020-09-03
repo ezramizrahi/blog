@@ -23,7 +23,7 @@ with open('../performance/result.json') as f:
 
 fig.append_trace(go.Bar(x=label, y=result, width=[0.3]), 1, 1)
 
-fig.update_yaxes(tickvals=[0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000])
+fig.update_yaxes(tickvals=[0, 500, 1000, 1500])
 fig.update_layout(showlegend=False, width=300, height=600, font=dict(size=16))
 fig.write_html('../plots/first_figure.html', auto_open=True)
 ```
