@@ -3,9 +3,10 @@ module.exports = {
     title: `git commit`,
     author: `Ezra Mizrahi`,
     description: `Software dev things.`,
-    siteUrl: `https://ezra-mizrahi.com/`,
+    siteUrl: `https://gitcommit.netlify.com/`,
     social: {
-      twitter: `monsieurmizrahi`
+      twitter: `monsieurmizrahi`,
+      github: `ezramizrahi`
     },
   },
   plugins: [

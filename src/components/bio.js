@@ -25,7 +25,8 @@ const Bio = () => {
         siteMetadata {
           author
           social {
-            twitter
+            twitter,
+            github
           }
         }
       }
@@ -56,15 +57,10 @@ const Bio = () => {
       <p>
         Written by <strong>{author}</strong>. This blog is a collection of useful things I've learned.
         {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          Follow me on Twitter
-        </a>
-        {` `}
-        and
-        {` `}
         <a href={`https://github.com/${social.github}`}>
-          check out my GitHub
+          Check out my GitHub.
         </a>
+        {` `}
       </p>
     </div>
   )
