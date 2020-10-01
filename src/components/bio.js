@@ -55,10 +55,10 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong>. This blog is a collection of useful things I've learned.
+        Written by <strong>{author}</strong>. A blog about Software Engineering.
         {` `}
         <a href={`https://github.com/${social.github}`}>
-          Check out my GitHub.
+          Have a look at my GitHub.
         </a>
         {` `}
       </p>
