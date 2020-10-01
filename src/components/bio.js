@@ -55,7 +55,7 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong>. A blog about Software Engineering.
+        A blog about Software Engineering. Written by <strong>{author}</strong>.
         {` `}
         <a href={`https://github.com/${social.github}`}>
           Have a look at my GitHub.
