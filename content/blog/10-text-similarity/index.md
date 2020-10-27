@@ -7,7 +7,7 @@ The other day I decided to make an application that returns the words shared bet
 
 In set theory, the intersection of two sets A and B is the set containing all elements of set A that also belong to set B. This can be written as:
 
-![Equation](equation.svg)
+![Intersection](intersection.png)
 
 A practical example of this is would be looking at two different texts A and B as sets, and the intersection between those texts are all of the words in text A that also belong to text B.
 
