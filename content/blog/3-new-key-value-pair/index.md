@@ -1,7 +1,7 @@
 ---
 title: "Adding A Key:Value Pair With Array.prototype.map()"
 date: "2019-10-22"
-description: "How to add a key:value pair to an object"
+description: "How to add a key:value pair to an object with ES6"
 ---
 
 Let's say you have the following array of objects:
